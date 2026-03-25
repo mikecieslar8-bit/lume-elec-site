@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 gradient-dark">
+    <section id="contact" className="py-24 gradient-warm">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,11 +27,10 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-sm font-semibold uppercase tracking-widest">Get In Touch</span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3">Request a Free Estimate</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mt-3 text-foreground">Request a Free Estimate</h2>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -57,20 +56,19 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
             {submitted ? (
-              <div className="p-8 rounded-xl bg-card border border-primary/30 text-center box-glow">
+              <div className="p-8 rounded-xl bg-card border border-primary/30 text-center box-glow shadow-md">
                 <div className="text-primary text-5xl mb-4">⚡</div>
-                <h3 className="font-display text-2xl font-bold mb-2">Thank You!</h3>
+                <h3 className="font-display text-2xl font-bold mb-2 text-foreground">Thank You!</h3>
                 <p className="text-muted-foreground">We'll get back to you within 24 hours.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="p-8 rounded-xl bg-card border border-border space-y-5">
+              <form onSubmit={handleSubmit} className="p-8 rounded-xl bg-card border border-border space-y-5 shadow-md">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label className="text-sm text-muted-foreground mb-1.5 block">Name</label>
@@ -100,7 +98,20 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-sm text-muted-foreground mb-1.5 block">How can we help?</label>
+                  <label className="text-sm text-muted-foreground mb-1.5 block">Service Needed</label>
+                  <select className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground focus:outline-none focus:border-primary/50 transition-colors">
+                    <option>Panel Upgrade</option>
+                    <option>Residential Wiring</option>
+                    <option>Commercial Electrical</option>
+                    <option>EV Charger Installation</option>
+                    <option>Lighting Installation</option>
+                    <option>Emergency Repair</option>
+                    <option>Inspection</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="text-sm text-muted-foreground mb-1.5 block">Project Details</label>
                   <textarea
                     required
                     rows={4}
