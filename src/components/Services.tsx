@@ -1,42 +1,57 @@
 import { motion } from "framer-motion";
-import { Home, Building2, Zap, Shield, Lightbulb, Wrench } from "lucide-react";
+import { Home, Building2, Zap, Shield, Lightbulb, Wrench, Cable, BatteryCharging, Plug } from "lucide-react";
 
 const services = [
   {
     icon: Home,
-    title: "Residential",
-    description: "Complete home electrical solutions from wiring to smart home installations.",
+    title: "Residential Wiring",
+    description: "Complete home electrical solutions — new construction wiring, rewiring older homes, and smart home installations.",
   },
   {
     icon: Building2,
-    title: "Commercial",
-    description: "Scalable electrical systems for offices, retail spaces, and industrial facilities.",
+    title: "Commercial Systems",
+    description: "Scalable electrical systems for offices, retail, restaurants, and industrial facilities. Code-compliant guaranteed.",
   },
   {
     icon: Zap,
     title: "Emergency Repairs",
-    description: "24/7 emergency electrical service when you need it most. Fast response guaranteed.",
+    description: "24/7 emergency electrical service. Blown fuses, power outages, sparking outlets — fast response guaranteed.",
   },
   {
     icon: Shield,
     title: "Panel Upgrades",
-    description: "Modernize your electrical panel to handle today's energy demands safely.",
+    description: "Upgrade from outdated fuse boxes to modern breaker panels. Handle today's energy demands safely.",
   },
   {
     icon: Lightbulb,
-    title: "Lighting Design",
-    description: "Custom lighting solutions that transform your space and reduce energy costs.",
+    title: "Lighting Design & Install",
+    description: "Recessed lighting, landscape lighting, chandeliers, LED retrofits — transform your space beautifully.",
+  },
+  {
+    icon: Cable,
+    title: "Whole-Home Rewiring",
+    description: "Replace old knob-and-tube or aluminum wiring with safe, modern copper wiring throughout your home.",
+  },
+  {
+    icon: BatteryCharging,
+    title: "EV Charger Installation",
+    description: "Level 2 electric vehicle charger installation for your garage or business parking lot.",
+  },
+  {
+    icon: Plug,
+    title: "Outlet & Switch Work",
+    description: "GFCI outlets, USB outlets, dimmer switches, 240V outlets for appliances — all installed to code.",
   },
   {
     icon: Wrench,
-    title: "Maintenance",
-    description: "Preventive maintenance programs to keep your electrical systems running smoothly.",
+    title: "Inspections & Maintenance",
+    description: "Electrical safety inspections, preventive maintenance, and code violation corrections.",
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 gradient-dark">
+    <section id="services" className="py-24 gradient-light">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -45,7 +60,10 @@ const Services = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-sm font-semibold uppercase tracking-widest">What We Do</span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3">Our Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mt-3 text-foreground">Our Electrical Services</h2>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
+            From simple repairs to complex installations, our licensed electricians handle it all.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -55,13 +73,13 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group p-8 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300 hover:box-glow"
+              transition={{ delay: i * 0.08 }}
+              className="group p-8 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300 hover:box-glow hover:shadow-lg"
             >
               <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center mb-5">
                 <service.icon className="w-6 h-6 text-primary-foreground" />
               </div>
-              <h3 className="font-display text-xl font-semibold mb-3">{service.title}</h3>
+              <h3 className="font-display text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
