@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg border-b border-border shadow-sm">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-2 group">
-          <Zap className="w-7 h-7 text-primary transition-all group-hover:drop-shadow-[0_0_8px_hsl(38,92%,50%)]" />
+          <Zap className="w-7 h-7 text-primary transition-all group-hover:drop-shadow-[0_0_8px_hsl(45,95%,50%)]" />
           <span className="font-display text-2xl font-bold tracking-tight text-foreground">
             LUME<span className="text-primary"> Electric</span>
           </span>
