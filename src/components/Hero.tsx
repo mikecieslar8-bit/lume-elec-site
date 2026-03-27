@@ -35,9 +35,8 @@ const Hero = () => {
             <span className="text-sm text-primary font-semibold">Professional Electricians You Can Trust</span>
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 text-foreground">
-            Powering Your World with{" "}
-            <span className="text-primary text-glow">Precision</span>
+          <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 text-foreground rounded-lg">
+            LUME ELECTRIC INC
           </h1>
 
           <p className="text-lg text-muted-foreground mb-10 max-w-lg leading-relaxed">
