@@ -6,25 +6,25 @@
 
 @layer base {
   :root {
-    --background: 210 30% 97%;
-    --foreground: 215 30% 12%;
+    --background: 210 25% 97%;
+    --foreground: 214 55% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 30% 12%;
+    --card-foreground: 214 55% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 30% 12%;
+    --popover-foreground: 214 55% 20%;
 
-    --primary: 45 95% 50%;
-    --primary-foreground: 215 40% 15%;
+    --primary: 46 90% 55%;
+    --primary-foreground: 214 55% 20%;
 
     --secondary: 210 20% 92%;
-    --secondary-foreground: 215 20% 30%;
+    --secondary-foreground: 214 40% 30%;
 
     --muted: 210 15% 93%;
-    --muted-foreground: 215 10% 45%;
+    --muted-foreground: 214 20% 45%;
 
-    --accent: 215 70% 45%;
+    --accent: 214 55% 25%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,24 +32,24 @@
 
     --border: 210 15% 88%;
     --input: 210 15% 88%;
-    --ring: 45 95% 50%;
+    --ring: 46 90% 55%;
 
     --radius: 0.75rem;
 
-    --glow-primary: 0 0 40px hsl(45 95% 50% / 0.15);
-    --glow-primary-strong: 0 0 60px hsl(45 95% 50% / 0.25);
+    --glow-primary: 0 0 40px hsl(46 90% 55% / 0.15);
+    --glow-primary-strong: 0 0 60px hsl(46 90% 55% / 0.25);
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'DM Sans', sans-serif;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 215 30% 12%;
-    --sidebar-primary: 45 95% 50%;
-    --sidebar-primary-foreground: 215 40% 15%;
+    --sidebar-primary: 46 90% 55%;
+    --sidebar-primary-foreground: 214 55% 20%;
     --sidebar-accent: 210 20% 92%;
-    --sidebar-accent-foreground: 215 20% 30%;
+    --sidebar-accent-foreground: 214 40% 30%;
     --sidebar-border: 210 15% 88%;
-    --sidebar-ring: 45 95% 50%;
+    --sidebar-ring: 46 90% 55%;
   }
 }
 
@@ -70,7 +70,7 @@
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 30px hsl(45 95% 50% / 0.4);
+    text-shadow: 0 0 30px hsl(46 90% 55% / 0.4);
   }
 
   .box-glow {
@@ -82,7 +82,7 @@
   }
 
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(45 95% 50%), hsl(40 90% 45%));
+    background: linear-gradient(135deg, hsl(46 90% 55%), hsl(42 85% 48%));
   }
 
   .gradient-light {
