@@ -1,16 +1,13 @@
-import { Zap } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
     <footer className="border-t border-border py-12">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <Zap className="w-5 h-5 text-primary" />
-            <span className="font-display text-lg font-bold">
-              LUME<span className="text-primary"> Electric</span>
-            </span>
-          </div>
+          <a href="#home" className="flex items-center gap-2">
+            <img src={logo} alt="Lume Electric" className="h-12 w-auto" />
+          </a>
           <div className="flex gap-8 text-sm text-muted-foreground">
             <a href="#home" className="hover:text-primary transition-colors">Home</a>
             <a href="#services" className="hover:text-primary transition-colors">Services</a>
