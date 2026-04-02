@@ -287,10 +287,6 @@ const Hero = () => {
               ))}
             </motion.div>
 
-            {/* Interactive lightbulb */}
-            <div className="mt-8 flex justify-start">
-              <InteractiveLightbulb />
-            </div>
           </motion.div>
 
           {/* Right side - Animated logo */}
