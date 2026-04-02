@@ -105,25 +105,34 @@ const Hero = () => {
               <span className="text-sm text-accent font-semibold">Professional Electricians You Can Trust</span>
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 text-foreground rounded-lg">
+            <h1 className="text-6xl md:text-8xl font-bold leading-[1.05] mb-6 tracking-tight">
               <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="block"
+                initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ delay: 0.2, duration: 0.7 }}
+                className="block text-foreground"
               >
                 LUME
               </motion.span>
               <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
+                initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ delay: 0.4, duration: 0.7 }}
                 className="block"
               >
-                ELECTRIC{" "}
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                  ELECTRIC
+                </span>{" "}
                 <motion.span
                   className="text-primary text-glow inline-block"
-                  animate={{ opacity: [1, 0.7, 1] }}
+                  animate={{
+                    opacity: [1, 0.6, 1],
+                    textShadow: [
+                      "0 0 20px hsl(52 100% 50% / 0.4)",
+                      "0 0 40px hsl(52 100% 50% / 0.7)",
+                      "0 0 20px hsl(52 100% 50% / 0.4)",
+                    ],
+                  }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
                   INC
