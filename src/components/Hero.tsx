@@ -14,7 +14,7 @@ const electricArc = {
   visible: {
     pathLength: 1,
     opacity: [0, 1, 1, 0.6],
-    transition: { duration: 2, ease: "easeInOut", repeat: Infinity, repeatDelay: 3 },
+    transition: { duration: 2, ease: "easeInOut" as const, repeat: Infinity, repeatDelay: 3 },
   },
 };
 
