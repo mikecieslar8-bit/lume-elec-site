@@ -203,7 +203,7 @@ const Hero = () => {
                 transition={{ delay: 0.4, duration: 0.7 }}
                 className="block"
               >
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-primary">
                   ELECTRIC
                 </span>{" "}
                 <motion.span
