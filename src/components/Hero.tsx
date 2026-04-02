@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Phone, ShieldCheck, Clock, Award, Zap } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import logo from "@/assets/logo.png";
-import InteractiveLightbulb from "./InteractiveLightbulb";
+
 
 const badges = [
   { icon: ShieldCheck, text: "Licensed & Insured" },
@@ -287,10 +287,6 @@ const Hero = () => {
               ))}
             </motion.div>
 
-            {/* Interactive lightbulb */}
-            <div className="mt-8 flex justify-start">
-              <InteractiveLightbulb />
-            </div>
           </motion.div>
 
           {/* Right side - Animated logo */}
