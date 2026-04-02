@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
 const stats = [
-  { value: "15+", label: "Years Experience" },
+  { value: "30+", label: "Years Experience" },
   { value: "2,000+", label: "Projects Completed" },
   { value: "100%", label: "Licensed & Insured" },
-  { value: "24/7", label: "Emergency Service" },
+  { value: "8:00 am-5:00 pm", label: "Emergency Service" },
 ];
 
 const values = [
