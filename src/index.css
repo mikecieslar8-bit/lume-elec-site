@@ -70,7 +70,7 @@
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 30px hsl(46 90% 55% / 0.4);
+    text-shadow: 0 0 30px hsl(52 100% 50% / 0.5);
   }
 
   .box-glow {
@@ -82,14 +82,14 @@
   }
 
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(46 90% 55%), hsl(42 85% 48%));
+    background: linear-gradient(135deg, hsl(52 100% 50%), hsl(210 100% 62%));
   }
 
   .gradient-light {
-    background: linear-gradient(180deg, hsl(210 30% 97%), hsl(210 25% 94%));
+    background: linear-gradient(180deg, hsl(210 20% 97%), hsl(210 25% 94%));
   }
 
   .gradient-warm {
-    background: linear-gradient(180deg, hsl(210 20% 95%), hsl(210 30% 97%));
+    background: linear-gradient(180deg, hsl(210 15% 95%), hsl(210 20% 97%));
   }
 }
