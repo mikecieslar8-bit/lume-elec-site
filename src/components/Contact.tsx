@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "(555) 123-4567" },
-  { icon: Mail, label: "Email", value: "info@lumeelectric.com" },
+  { icon: Phone, label: "Phone", value: "929-512-5863" },
+  { icon: Mail, label: "Email", value: "@lumeelectric.com" },
   { icon: MapPin, label: "Location", value: "New York City and Vicinity" },
   { icon: Clock, label: "Hours", value: "Mon–Fri 8AM–5PM " },
 ];
