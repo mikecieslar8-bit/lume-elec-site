@@ -6,7 +6,7 @@ import logo from "@/assets/logo.png";
 
 const badges = [
   { icon: ShieldCheck, text: "Licensed & Insured" },
-  { icon: Clock, text: "24/7 Emergency" },
+  { icon: Clock, text: "​" },
   { icon: Award, text: "5-Star Rated" },
 ];
 

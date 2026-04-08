@@ -5,8 +5,8 @@ import { useState } from "react";
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "(555) 123-4567" },
   { icon: Mail, label: "Email", value: "info@lumeelectric.com" },
-  { icon: MapPin, label: "Location", value: "Serving the Greater Metro Area" },
-  { icon: Clock, label: "Hours", value: "Mon–Fri 7AM–6PM | 24/7 Emergency" },
+  { icon: MapPin, label: "Location", value: "New York City and Vicinity" },
+  { icon: Clock, label: "Hours", value: "Mon–Fri 8AM–5PM " },
 ];
 
 const Contact = () => {
@@ -39,7 +39,7 @@ const Contact = () => {
           >
             <p className="text-muted-foreground text-lg leading-relaxed">
               Ready to start your project? Contact us for a free, no-obligation estimate.
-              We respond to all inquiries within 24 hours.
+              We respond to all inquiries within one business day.
             </p>
             <div className="space-y-5 mt-8">
               {contactInfo.map((item) => (
