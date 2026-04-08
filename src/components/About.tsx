@@ -5,7 +5,7 @@ const stats = [
   { value: "30+", label: "Years Experience" },
   { value: "2,000+", label: "Projects Completed" },
   { value: "100%", label: "Licensed & Insured" },
-  { value: "8:00 am-5:00 pm", label: "Emergency Service" },
+  { value: "8:00 am-5:00 pm", label: "Service" },
 ];
 
 const values = [
@@ -32,7 +32,7 @@ const About = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               At LUME Electric, we believe great electrical work starts with great people.
               Our team of certified electricians brings expertise, integrity, and a commitment
-              to safety to every project — big or small.
+              to safety to every project.
             </p>
             <ul className="space-y-4">
               {values.map((item) => (
