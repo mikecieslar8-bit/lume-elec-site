@@ -256,12 +256,12 @@ const Hero = () => {
                 </span>
               </motion.a>
               <motion.a
-                href="tel:+15551234567"
+                href="tel:+19295125863"
                 className="border border-border bg-card/80 backdrop-blur-sm text-foreground px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center justify-center gap-2 hover:border-accent/50 transition-colors shadow-sm"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <Phone className="w-5 h-5 text-accent" /> (555) 123-4567
+                <Phone className="w-5 h-5 text-accent" /> 929-512-5863
               </motion.a>
             </motion.div>
 
