@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Home, Building2, Zap, Shield, Lightbulb, Wrench, Cable, BatteryCharging, Plug } from "lucide-react";
+import { Home, Building2, Shield, Lightbulb, Wrench, Cable, BatteryCharging, Plug } from "lucide-react";
 
 const services = [
   {
@@ -11,11 +11,6 @@ const services = [
     icon: Building2,
     title: "Commercial Systems",
     description: "Scalable electrical systems for offices, retail, restaurants, and industrial facilities. Code-compliant guaranteed.",
-  },
-  {
-    icon: Zap,
-    title: "Emergency Repairs",
-    description: "24/7 emergency electrical service. Blown fuses, power outages, sparking outlets — fast response guaranteed.",
   },
   {
     icon: Shield,
@@ -66,7 +61,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
