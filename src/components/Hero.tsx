@@ -164,7 +164,7 @@ const Hero = () => {
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />
 
-      <div className="container mx-auto px-6 relative z-10 pt-24">
+      <div className="container mx-auto px-6 relative z-10 pt-24 bg-slate-400">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left content */}
           <motion.div
