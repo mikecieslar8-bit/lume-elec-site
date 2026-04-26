@@ -192,7 +192,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ delay: 0.2, duration: 0.7 }}
-                className="block text-foreground"
+                className="block text-left text-secondary-foreground"
               >
                 LUME
               </motion.span>
@@ -217,7 +217,7 @@ const Hero = () => {
                   }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  INC
+                  {"\u200B"}
                 </motion.span>
               </motion.span>
             </h1>
@@ -255,12 +255,12 @@ const Hero = () => {
                 </span>
               </motion.a>
               <motion.a
-                href="tel:+19295125863"
+                href="tel:+19295522400"
                 className="border border-border bg-card/80 backdrop-blur-sm text-foreground px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center justify-center gap-2 hover:border-accent/50 transition-colors shadow-sm"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <Phone className="w-5 h-5 text-accent" /> 929-512-5863
+                <Phone className="w-5 h-5 text-accent" /> {"\u200B"}929-552-2400
               </motion.a>
             </motion.div>
 
