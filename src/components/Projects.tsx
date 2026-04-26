@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import lighting01 from "@/assets/projects/custom-lighting/lighting-01.jpg";
 import lighting02 from "@/assets/projects/custom-lighting/lighting-02.jpg";
@@ -33,9 +33,10 @@ import lighting28 from "@/assets/projects/custom-lighting/lighting-28.jpg";
 import lighting29 from "@/assets/projects/custom-lighting/lighting-29.jpg";
 import lighting30 from "@/assets/projects/custom-lighting/lighting-30.jpg";
 
-type Project = { src: string; alt: string; category: string };
+type Slide = { src: string; alt: string };
+type CategoryGroup = { category: string; slides: Slide[] };
 
-const customLightingFixtures: Project[] = [
+const customLightingSlides: Slide[] = [
   lighting01, lighting02, lighting03, lighting04, lighting05,
   lighting06, lighting07, lighting08, lighting09, lighting10,
   lighting11, lighting12, lighting13, lighting14, lighting15,
@@ -45,17 +46,101 @@ const customLightingFixtures: Project[] = [
 ].map((src, i) => ({
   src,
   alt: `Custom lighting fixture installation ${i + 1}`,
-  category: "Custom Lighting Fixtures",
 }));
 
-// Additional categories can be appended here with the same shape.
-const projects: Project[] = [
-  ...customLightingFixtures,
+// Add additional categories here with the same shape — each renders as its own slideshow.
+const categories: CategoryGroup[] = [
+  { category: "Custom Lighting Fixtures", slides: customLightingSlides },
 ];
 
-const Projects = () => {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+const CategorySlideshow = ({ group }: { group: CategoryGroup }) => {
+  const [index, setIndex] = useState(0);
+  const total = group.slides.length;
 
+  const next = () => setIndex((i) => (i + 1) % total);
+  const prev = () => setIndex((i) => (i - 1 + total) % total);
+
+  const current = group.slides[index];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="mb-16 last:mb-0"
+    >
+      <div className="flex items-baseline justify-between mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold text-foreground">
+          {group.category}
+        </h3>
+        <span className="text-sm text-muted-foreground font-medium">
+          {index + 1} / {total}
+        </span>
+      </div>
+
+      <div
+        className="relative w-full aspect-[16/9] overflow-hidden rounded-xl shadow-lg bg-muted cursor-pointer group select-none"
+        onClick={next}
+      >
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={current.src}
+            src={current.src}
+            alt={current.alt}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+        </AnimatePresence>
+
+        {/* Prev / Next controls */}
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            prev();
+          }}
+          aria-label="Previous image"
+          className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/70 text-foreground hover:bg-background transition-opacity opacity-0 group-hover:opacity-100"
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </button>
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            next();
+          }}
+          aria-label="Next image"
+          className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/70 text-foreground hover:bg-background transition-opacity opacity-0 group-hover:opacity-100"
+        >
+          <ChevronRight className="h-6 w-6" />
+        </button>
+      </div>
+
+      {/* Dot indicators */}
+      <div className="flex flex-wrap justify-center gap-2 mt-4">
+        {group.slides.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            onClick={() => setIndex(i)}
+            aria-label={`Go to image ${i + 1}`}
+            className={`h-2 rounded-full transition-all ${
+              i === index ? "w-6 bg-primary" : "w-2 bg-muted-foreground/40 hover:bg-muted-foreground"
+            }`}
+          />
+        ))}
+      </div>
+    </motion.div>
+  );
+};
+
+const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -70,65 +155,16 @@ const Projects = () => {
             Our <span className="text-primary">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Take a look at some of the commercial and luxury retail spaces we've wired, lit, and powered — from high-end showrooms to flagship storefronts.
+            Browse our work by category. Click an image — or use the arrows — to flip through the slideshow.
           </p>
         </motion.div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="break-inside-avoid cursor-pointer group"
-              onClick={() => setSelectedImage(index)}
-            >
-              <div className="overflow-hidden rounded-lg shadow-md">
-                <img
-                  src={project.src}
-                  alt={project.alt}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground font-medium">
-                {project.category}
-              </p>
-            </motion.div>
+        <div className="max-w-5xl mx-auto">
+          {categories.map((group) => (
+            <CategorySlideshow key={group.category} group={group} />
           ))}
         </div>
       </div>
-
-      {/* Lightbox */}
-      <AnimatePresence>
-        {selectedImage !== null && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 text-white/80 hover:text-white z-50"
-            >
-              <X className="h-8 w-8" />
-            </button>
-            <motion.img
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              src={projects[selectedImage].src}
-              alt={projects[selectedImage].alt}
-              className="max-w-full max-h-[90vh] object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };
