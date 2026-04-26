@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "929-512-5863" },
-  { icon: Mail, label: "Email", value: "@lumeelectric.com" },
+  { icon: Phone, label: "Phone", value: "\u200B929-552-2400" },
+  { icon: Mail, label: "Email", value: "office@lumeelectric.com" },
   { icon: MapPin, label: "Location", value: "New York City and Vicinity" },
   { icon: Clock, label: "Hours", value: "Mon–Fri 8AM–5PM " },
 ];
@@ -121,7 +121,7 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full gradient-primary text-primary-foreground py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity box-glow"
+                  className="w-full gradient-primary py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity box-glow text-primary-foreground bg-primary"
                 >
                   Send Request
                 </button>
