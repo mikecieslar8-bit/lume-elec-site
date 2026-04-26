@@ -2,46 +2,55 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
-import project01 from "@/assets/projects/project-01.jpg";
-import project02 from "@/assets/projects/project-02.jpg";
-import project03 from "@/assets/projects/project-03.jpg";
-import project04 from "@/assets/projects/project-04.jpg";
-import project05 from "@/assets/projects/project-05.jpg";
-import project06 from "@/assets/projects/project-06.jpg";
-import project07 from "@/assets/projects/project-07.jpg";
-import project08 from "@/assets/projects/project-08.jpg";
-import project09 from "@/assets/projects/project-09.jpg";
-import project10 from "@/assets/projects/project-10.jpg";
-import project11 from "@/assets/projects/project-11.jpg";
-import project12 from "@/assets/projects/project-12.jpg";
-import project13 from "@/assets/projects/project-13.jpg";
-import project14 from "@/assets/projects/project-14.jpg";
-import project15 from "@/assets/projects/project-15.jpg";
-import project16 from "@/assets/projects/project-16.jpg";
-import project17 from "@/assets/projects/project-17.jpg";
-import project18 from "@/assets/projects/project-18.jpg";
-import project19 from "@/assets/projects/project-19.jpg";
+import lighting01 from "@/assets/projects/custom-lighting/lighting-01.jpg";
+import lighting02 from "@/assets/projects/custom-lighting/lighting-02.jpg";
+import lighting03 from "@/assets/projects/custom-lighting/lighting-03.jpg";
+import lighting04 from "@/assets/projects/custom-lighting/lighting-04.jpg";
+import lighting05 from "@/assets/projects/custom-lighting/lighting-05.jpg";
+import lighting06 from "@/assets/projects/custom-lighting/lighting-06.jpg";
+import lighting07 from "@/assets/projects/custom-lighting/lighting-07.jpg";
+import lighting08 from "@/assets/projects/custom-lighting/lighting-08.jpg";
+import lighting09 from "@/assets/projects/custom-lighting/lighting-09.jpg";
+import lighting10 from "@/assets/projects/custom-lighting/lighting-10.jpg";
+import lighting11 from "@/assets/projects/custom-lighting/lighting-11.jpg";
+import lighting12 from "@/assets/projects/custom-lighting/lighting-12.jpg";
+import lighting13 from "@/assets/projects/custom-lighting/lighting-13.jpg";
+import lighting14 from "@/assets/projects/custom-lighting/lighting-14.jpg";
+import lighting15 from "@/assets/projects/custom-lighting/lighting-15.jpg";
+import lighting16 from "@/assets/projects/custom-lighting/lighting-16.jpg";
+import lighting17 from "@/assets/projects/custom-lighting/lighting-17.jpg";
+import lighting18 from "@/assets/projects/custom-lighting/lighting-18.jpg";
+import lighting19 from "@/assets/projects/custom-lighting/lighting-19.jpg";
+import lighting20 from "@/assets/projects/custom-lighting/lighting-20.jpg";
+import lighting21 from "@/assets/projects/custom-lighting/lighting-21.jpg";
+import lighting22 from "@/assets/projects/custom-lighting/lighting-22.jpg";
+import lighting23 from "@/assets/projects/custom-lighting/lighting-23.jpg";
+import lighting24 from "@/assets/projects/custom-lighting/lighting-24.jpg";
+import lighting25 from "@/assets/projects/custom-lighting/lighting-25.jpg";
+import lighting26 from "@/assets/projects/custom-lighting/lighting-26.jpg";
+import lighting27 from "@/assets/projects/custom-lighting/lighting-27.jpg";
+import lighting28 from "@/assets/projects/custom-lighting/lighting-28.jpg";
+import lighting29 from "@/assets/projects/custom-lighting/lighting-29.jpg";
+import lighting30 from "@/assets/projects/custom-lighting/lighting-30.jpg";
 
-const projects = [
-  { src: project01, alt: "Retail store lighting installation", category: "Commercial Retail" },
-  { src: project02, alt: "Showroom lighting design", category: "Showroom" },
-  { src: project03, alt: "Designer lighting showroom", category: "Showroom" },
-  { src: project04, alt: "Foscarini showroom electrical", category: "Showroom" },
-  { src: project05, alt: "Gallery hallway lighting", category: "Commercial" },
-  { src: project06, alt: "Davide Groppi storefront lighting", category: "Storefront" },
-  { src: project07, alt: "Office workspace lighting", category: "Office" },
-  { src: project08, alt: "Retail interior with track lighting", category: "Commercial Retail" },
-  { src: project09, alt: "Oula reception area lighting", category: "Commercial" },
-  { src: project10, alt: "Hallway with warm ambient lighting", category: "Commercial" },
-  { src: project11, alt: "Jewelry display case lighting", category: "Luxury Retail" },
-  { src: project12, alt: "Grand Seiko showroom electrical", category: "Luxury Retail" },
-  { src: project13, alt: "De Beers storefront lighting", category: "Luxury Retail" },
-  { src: project14, alt: "Alison Lou boutique lighting", category: "Luxury Retail" },
-  { src: project15, alt: "Jewelry display ambient lighting", category: "Luxury Retail" },
-  { src: project16, alt: "Fashion retail store lighting", category: "Commercial Retail" },
-  { src: project17, alt: "Lanvin storefront illumination", category: "Storefront" },
-  { src: project18, alt: "Boutique interior lighting design", category: "Luxury Retail" },
-  { src: project19, alt: "De Beers interior showcase lighting", category: "Luxury Retail" },
+type Project = { src: string; alt: string; category: string };
+
+const customLightingFixtures: Project[] = [
+  lighting01, lighting02, lighting03, lighting04, lighting05,
+  lighting06, lighting07, lighting08, lighting09, lighting10,
+  lighting11, lighting12, lighting13, lighting14, lighting15,
+  lighting16, lighting17, lighting18, lighting19, lighting20,
+  lighting21, lighting22, lighting23, lighting24, lighting25,
+  lighting26, lighting27, lighting28, lighting29, lighting30,
+].map((src, i) => ({
+  src,
+  alt: `Custom lighting fixture installation ${i + 1}`,
+  category: "Custom Lighting Fixtures",
+}));
+
+// Additional categories can be appended here with the same shape.
+const projects: Project[] = [
+  ...customLightingFixtures,
 ];
 
 const Projects = () => {
