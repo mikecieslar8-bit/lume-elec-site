@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -32,6 +32,7 @@ import lighting27 from "@/assets/projects/custom-lighting/lighting-27.jpg";
 import lighting28 from "@/assets/projects/custom-lighting/lighting-28.jpg";
 import lighting29 from "@/assets/projects/custom-lighting/lighting-29.jpg";
 import lighting30 from "@/assets/projects/custom-lighting/lighting-30.jpg";
+import lighting31 from "@/assets/projects/custom-lighting/lighting-31.jpg";
 
 type Slide = { src: string; alt: string };
 type CategoryGroup = { category: string; slides: Slide[] };
@@ -42,7 +43,7 @@ const customLightingSlides: Slide[] = [
   lighting11, lighting12, lighting13, lighting14, lighting15,
   lighting16, lighting17, lighting18, lighting19, lighting20,
   lighting21, lighting22, lighting23, lighting24, lighting25,
-  lighting26, lighting27, lighting28, lighting29, lighting30,
+  lighting26, lighting27, lighting28, lighting29, lighting30, lighting31,
 ].map((src, i) => ({
   src,
   alt: `Custom lighting fixture installation ${i + 1}`,
@@ -62,6 +63,14 @@ const CategorySlideshow = ({ group }: { group: CategoryGroup }) => {
 
   const current = group.slides[index];
 
+  // Auto-advance every 3 seconds; resets whenever the index changes (manual nav too).
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % total);
+    }, 3000);
+    return () => clearInterval(id);
+  }, [index, total]);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -80,7 +89,7 @@ const CategorySlideshow = ({ group }: { group: CategoryGroup }) => {
       </div>
 
       <div
-        className="relative w-full aspect-[16/9] overflow-hidden rounded-xl shadow-lg bg-muted cursor-pointer group select-none"
+        className="relative w-full aspect-[16/9] overflow-hidden rounded-xl shadow-lg bg-background cursor-pointer group select-none"
         onClick={next}
       >
         <AnimatePresence mode="wait">
@@ -92,7 +101,7 @@ const CategorySlideshow = ({ group }: { group: CategoryGroup }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
             loading="lazy"
           />
         </AnimatePresence>
