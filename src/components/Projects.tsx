@@ -12,27 +12,6 @@ import lighting07 from "@/assets/projects/custom-lighting/lighting-07.jpg";
 import lighting08 from "@/assets/projects/custom-lighting/lighting-08.jpg";
 import lighting09 from "@/assets/projects/custom-lighting/lighting-09.jpg";
 import lighting10 from "@/assets/projects/custom-lighting/lighting-10.jpg";
-import lighting11 from "@/assets/projects/custom-lighting/lighting-11.jpg";
-import lighting12 from "@/assets/projects/custom-lighting/lighting-12.jpg";
-import lighting13 from "@/assets/projects/custom-lighting/lighting-13.jpg";
-import lighting14 from "@/assets/projects/custom-lighting/lighting-14.jpg";
-import lighting15 from "@/assets/projects/custom-lighting/lighting-15.jpg";
-import lighting16 from "@/assets/projects/custom-lighting/lighting-16.jpg";
-import lighting17 from "@/assets/projects/custom-lighting/lighting-17.jpg";
-import lighting18 from "@/assets/projects/custom-lighting/lighting-18.jpg";
-import lighting19 from "@/assets/projects/custom-lighting/lighting-19.jpg";
-import lighting20 from "@/assets/projects/custom-lighting/lighting-20.jpg";
-import lighting21 from "@/assets/projects/custom-lighting/lighting-21.jpg";
-import lighting22 from "@/assets/projects/custom-lighting/lighting-22.jpg";
-import lighting23 from "@/assets/projects/custom-lighting/lighting-23.jpg";
-import lighting24 from "@/assets/projects/custom-lighting/lighting-24.jpg";
-import lighting25 from "@/assets/projects/custom-lighting/lighting-25.jpg";
-import lighting26 from "@/assets/projects/custom-lighting/lighting-26.jpg";
-import lighting27 from "@/assets/projects/custom-lighting/lighting-27.jpg";
-import lighting28 from "@/assets/projects/custom-lighting/lighting-28.jpg";
-import lighting29 from "@/assets/projects/custom-lighting/lighting-29.jpg";
-import lighting30 from "@/assets/projects/custom-lighting/lighting-30.jpg";
-import lighting31 from "@/assets/projects/custom-lighting/lighting-31.jpg";
 
 type Slide = { src: string; alt: string };
 type CategoryGroup = { category: string; slides: Slide[] };
@@ -40,10 +19,6 @@ type CategoryGroup = { category: string; slides: Slide[] };
 const customLightingSlides: Slide[] = [
   lighting01, lighting02, lighting03, lighting04, lighting05,
   lighting06, lighting07, lighting08, lighting09, lighting10,
-  lighting11, lighting12, lighting13, lighting14, lighting15,
-  lighting16, lighting17, lighting18, lighting19, lighting20,
-  lighting21, lighting22, lighting23, lighting24, lighting25,
-  lighting26, lighting27, lighting28, lighting29, lighting30, lighting31,
 ].map((src, i) => ({
   src,
   alt: `Custom lighting fixture installation ${i + 1}`,
