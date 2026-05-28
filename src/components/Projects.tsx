@@ -37,6 +37,7 @@ const CategorySlideshow = ({ group }: { group: CategoryGroup }) => {
   const prev = () => setIndex((i) => (i - 1 + total) % total);
 
   const current = group.slides[index];
+  const safeCurrent = current ?? group.slides[0];
 
   // Auto-advance every 3 seconds; resets whenever the index changes (manual nav too).
   useEffect(() => {
@@ -69,9 +70,9 @@ const CategorySlideshow = ({ group }: { group: CategoryGroup }) => {
       >
         <AnimatePresence mode="wait">
           <motion.img
-            key={current.src}
-            src={current.src}
-            alt={current.alt}
+            key={safeCurrent.src}
+            src={safeCurrent.src}
+            alt={safeCurrent.alt}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
