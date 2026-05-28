@@ -12,6 +12,11 @@ import lighting07 from "@/assets/projects/custom-lighting/lighting-07.jpg";
 import lighting08 from "@/assets/projects/custom-lighting/lighting-08.jpg";
 import lighting09 from "@/assets/projects/custom-lighting/lighting-09.jpg";
 import lighting10 from "@/assets/projects/custom-lighting/lighting-10.jpg";
+import lighting11 from "@/assets/projects/custom-lighting/lighting-11.jpg";
+import lighting12 from "@/assets/projects/custom-lighting/lighting-12.jpg";
+import lighting13 from "@/assets/projects/custom-lighting/lighting-13.jpg";
+import lighting14 from "@/assets/projects/custom-lighting/lighting-14.jpg";
+import lighting15 from "@/assets/projects/custom-lighting/lighting-15.jpg";
 
 type Slide = { src: string; alt: string };
 type CategoryGroup = { category: string; slides: Slide[] };
@@ -19,6 +24,7 @@ type CategoryGroup = { category: string; slides: Slide[] };
 const customLightingSlides: Slide[] = [
   lighting01, lighting02, lighting03, lighting04, lighting05,
   lighting06, lighting07, lighting08, lighting09, lighting10,
+  lighting11, lighting12, lighting13, lighting14, lighting15,
 ].map((src, i) => ({
   src,
   alt: `Custom lighting fixture installation ${i + 1}`,
