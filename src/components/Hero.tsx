@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, ShieldCheck, Clock, Award, Zap } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 import logo from "@/assets/logo.png";
 
 
@@ -21,10 +20,9 @@ const electricArc = {
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image */}
+      {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/85" />
+        <div className="absolute inset-0 bg-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
       </div>
 
