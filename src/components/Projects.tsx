@@ -33,6 +33,14 @@ import retail12 from "@/assets/projects/retail/retail-12.png";
 import retail13 from "@/assets/projects/retail/retail-13.png";
 import retail14 from "@/assets/projects/retail/retail-14.png";
 import retail15 from "@/assets/projects/retail/retail-15.png";
+import retail16 from "@/assets/projects/retail/retail-16.jpg";
+import retail17 from "@/assets/projects/retail/retail-17.jpg";
+import retail18 from "@/assets/projects/retail/retail-18.jpg";
+import retail19 from "@/assets/projects/retail/retail-19.jpg";
+import retail20 from "@/assets/projects/retail/retail-20.jpg";
+import retail21 from "@/assets/projects/retail/retail-21.jpg";
+import retail22 from "@/assets/projects/retail/retail-22.jpg";
+import retail23 from "@/assets/projects/retail/retail-23.jpg";
 
 type Slide = { src: string; alt: string };
 type CategoryGroup = { category: string; slides: Slide[] };
@@ -50,6 +58,8 @@ const retailSlides: Slide[] = [
   retail01, retail02, retail03, retail04, retail05,
   retail06, retail07, retail08, retail09, retail10,
   retail11, retail12, retail13, retail14, retail15,
+  retail16, retail17, retail18, retail19, retail20,
+  retail21, retail22, retail23,
 ].map((src, i) => ({
   src,
   alt: `High end retail store project ${i + 1}`,
