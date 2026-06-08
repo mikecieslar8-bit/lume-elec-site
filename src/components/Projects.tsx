@@ -18,6 +18,22 @@ import lighting13 from "@/assets/projects/custom-lighting/lighting-13.jpg";
 import lighting14 from "@/assets/projects/custom-lighting/lighting-14.jpg";
 import lighting15 from "@/assets/projects/custom-lighting/lighting-15.jpg";
 
+import retail01 from "@/assets/projects/retail/retail-01.png";
+import retail02 from "@/assets/projects/retail/retail-02.png";
+import retail03 from "@/assets/projects/retail/retail-03.png";
+import retail04 from "@/assets/projects/retail/retail-04.png";
+import retail05 from "@/assets/projects/retail/retail-05.png";
+import retail06 from "@/assets/projects/retail/retail-06.png";
+import retail07 from "@/assets/projects/retail/retail-07.png";
+import retail08 from "@/assets/projects/retail/retail-08.png";
+import retail09 from "@/assets/projects/retail/retail-09.png";
+import retail10 from "@/assets/projects/retail/retail-10.png";
+import retail11 from "@/assets/projects/retail/retail-11.png";
+import retail12 from "@/assets/projects/retail/retail-12.png";
+import retail13 from "@/assets/projects/retail/retail-13.png";
+import retail14 from "@/assets/projects/retail/retail-14.png";
+import retail15 from "@/assets/projects/retail/retail-15.png";
+
 type Slide = { src: string; alt: string };
 type CategoryGroup = { category: string; slides: Slide[] };
 
@@ -30,9 +46,19 @@ const customLightingSlides: Slide[] = [
   alt: `Custom lighting fixture installation ${i + 1}`,
 }));
 
+const retailSlides: Slide[] = [
+  retail01, retail02, retail03, retail04, retail05,
+  retail06, retail07, retail08, retail09, retail10,
+  retail11, retail12, retail13, retail14, retail15,
+].map((src, i) => ({
+  src,
+  alt: `High end retail store project ${i + 1}`,
+}));
+
 // Add additional categories here with the same shape — each renders as its own slideshow.
 const categories: CategoryGroup[] = [
   { category: "Custom Lighting Fixtures", slides: customLightingSlides },
+  { category: "High End Retail Stores", slides: retailSlides },
 ];
 
 const CategorySlideshow = ({ group }: { group: CategoryGroup }) => {
