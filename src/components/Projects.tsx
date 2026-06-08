@@ -42,6 +42,13 @@ import retail21 from "@/assets/projects/retail/retail-21.jpg";
 import retail22 from "@/assets/projects/retail/retail-22.jpg";
 import retail23 from "@/assets/projects/retail/retail-23.jpg";
 
+import showroom01 from "@/assets/projects/showrooms/showroom-01.png";
+import showroom02 from "@/assets/projects/showrooms/showroom-02.png";
+import showroom03 from "@/assets/projects/showrooms/showroom-03.png";
+import showroom04 from "@/assets/projects/showrooms/showroom-04.png";
+import showroom05 from "@/assets/projects/showrooms/showroom-05.jpg";
+import showroom06 from "@/assets/projects/showrooms/showroom-06.jpg";
+
 type Slide = { src: string; alt: string };
 type CategoryGroup = { category: string; slides: Slide[] };
 
@@ -65,10 +72,18 @@ const retailSlides: Slide[] = [
   alt: `High end retail store project ${i + 1}`,
 }));
 
+const showroomSlides: Slide[] = [
+  showroom01, showroom02, showroom03, showroom04, showroom05, showroom06,
+].map((src, i) => ({
+  src,
+  alt: `Showroom project ${i + 1}`,
+}));
+
 // Add additional categories here with the same shape — each renders as its own slideshow.
 const categories: CategoryGroup[] = [
   { category: "Custom Lighting Fixtures", slides: customLightingSlides },
   { category: "High End Retail Stores", slides: retailSlides },
+  { category: "Showrooms", slides: showroomSlides },
 ];
 
 const CategorySlideshow = ({ group }: { group: CategoryGroup }) => {
